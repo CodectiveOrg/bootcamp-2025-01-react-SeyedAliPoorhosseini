@@ -8,8 +8,8 @@ function Header() {
   return (
     <header className={styles.header}>
       <h1>Dream Board</h1>
-      <Button>
-        <IconParkTwotoneMoon className={styles.icon} />
+      <Button SameWidthHeight>
+        <IconParkTwotoneMoon/>
       </Button>
     </header>
   );

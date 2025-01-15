@@ -7,11 +7,5 @@
         font-weight: 500;
     }
     Button{
-        inline-size: 2rem;
-        border: 0;
-        background-color: transparent;
-        .icon{
-
-        }
     }
 }

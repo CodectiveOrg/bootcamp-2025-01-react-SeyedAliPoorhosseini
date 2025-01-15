@@ -1,0 +1,28 @@
+.button {
+  background-color: var(--color-primary);
+  color: ver(var(--color-white));
+
+  border: none;
+
+  &.rectangle {
+    border-radius: 0.5rem;
+  }
+  &.circle {
+    border-radius: 999rem;
+  }
+  &.small {
+    padding: 0.5rem;
+  }
+  &.large {
+    padding: 0.75rem;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 4px var(--color-primary-focus);
+
+    outline: none;
+  }
+  &.same-width-height{
+    aspect-ratio: 1/1;
+  }
+}
