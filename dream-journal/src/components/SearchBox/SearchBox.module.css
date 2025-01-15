@@ -1,0 +1,32 @@
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid var(--color-primary);
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+
+  outline: none;
+
+  background-color: var(--color-white);
+
+  padding: 0.5rem;
+
+  input {
+    border: none;
+    outline: none;
+
+    color: var(--color-primary);
+    &::placeholder{
+        color: var(--color-primary);
+    }
+  }
+  svg {
+    color: var(--color-primary);
+  }
+  &:focus-within {
+    outline: 3px solid var(--color-primary-focus);
+  }
+}

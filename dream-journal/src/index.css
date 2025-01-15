@@ -1,3 +1,8 @@
+:root {
+  --color-primary: hsl(173.06, 100%, 23.73%);
+  --color-primary-focus: hsl(173.06, 100%, 23.73%,40%);
+  --color-white: hsl(0, 0%, 100%);
+}
 *,
 *::before,
 *::after {

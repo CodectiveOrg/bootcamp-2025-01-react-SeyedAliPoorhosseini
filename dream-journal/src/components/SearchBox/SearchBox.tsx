@@ -1,10 +1,12 @@
 import IconParkTwotoneSearch from "../../icons/IconParkTwotoneSearch";
 
+import styles from "./SearchBox.module.css";
+
 function SearchBox() {
   return (
-    <div className="search-box">
-      <input type="text" />
-      <IconParkTwotoneSearch className="icon"></IconParkTwotoneSearch>
+    <div className={styles['search-box']}>
+      <input type="text" placeholder="write a new dream ..." />
+      <IconParkTwotoneSearch></IconParkTwotoneSearch>
     </div>
   );
 }
