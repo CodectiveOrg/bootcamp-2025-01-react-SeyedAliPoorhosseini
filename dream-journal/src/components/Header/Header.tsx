@@ -1,13 +1,15 @@
 import Button from "../Button/Button";
 
-import IconamoonModeDark from "../../icons/IconamoonModeDark";
+import IconParkTwotoneMoon from "../../icons/IconParkTwotoneMoon";
+
+import styles from "./Header.module.css";
 
 function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <h1>Dream Board</h1>
-      <Button className="theme" >
-        <IconamoonModeDark className="icon" />
+      <Button>
+        <IconParkTwotoneMoon className={styles.icon} />
       </Button>
     </header>
   );

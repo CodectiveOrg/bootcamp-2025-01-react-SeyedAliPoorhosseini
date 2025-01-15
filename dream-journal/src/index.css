@@ -23,3 +23,13 @@ option,
 optgroup {
   font: inherit;
 }
+
+body {
+  inline-size: min(45rem, 100% - 2rem);
+
+  margin-inline: auto;
+
+  background-image: url(./cloud.jpg);
+  background-size: 100vw 20rem;
+  background-repeat: no-repeat;
+}

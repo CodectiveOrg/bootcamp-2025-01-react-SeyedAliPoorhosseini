@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import ItemsList from "./components/ItemsList/ItemsList";
 import Toolbar from "./components/Toolbar/Toolbar";
 
-import "./App.css";
+import "./App.module.css";
 
 function App() {
   return (
