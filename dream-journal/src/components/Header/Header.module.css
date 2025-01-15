@@ -7,5 +7,8 @@
         font-weight: 500;
     }
     Button{
+        svg{
+            color: #fff;
+        }
     }
 }
