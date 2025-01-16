@@ -1,8 +1,10 @@
-.footer{
-    Button{
-        svg{
-            color: #fff;
-        }
+.footer {
+  Button {
+    position: fixed;
+    inset-inline-end: max(1rem, ((100vw - 45rem) / 2));
+    inset-block-end: 2rem;
+    svg {
+      color: #fff;
     }
-
+  }
 }
