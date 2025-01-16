@@ -1,0 +1,72 @@
+.items {
+  display: grid;
+  gap: 1rem;
+
+  background-color: var(--color-white);
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  inline-size: min(32rem, 100%);
+
+  margin-inline: auto;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-block-end: 1px solid var(--color-primary-border);
+
+    padding-block-end: 1rem;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      input {
+        block-size: 1.5em;
+        inline-size: 1.5em;
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      opacity: 0;
+
+      button {
+        font-size: 1.1rem;
+
+        background-color: transparent;
+        color: var(--color-gray);
+
+        border: none;
+
+        cursor: pointer;
+
+        &.edit {
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        &.remove {
+          &:hover {
+            color: var(--color-danger);
+          }
+        }
+      }
+    }
+    &:hover {
+        .actions{
+            opacity: 1;
+        }
+    }
+  }
+}
