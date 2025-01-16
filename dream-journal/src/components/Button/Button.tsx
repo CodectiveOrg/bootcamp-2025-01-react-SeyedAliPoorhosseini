@@ -1,7 +1,8 @@
 import { ComponentProps } from "react";
 
-import styles from "./Button.module.css";
 import clsx from "clsx";
+
+import styles from "./Button.module.css";
 
 type Variant = "solid" | "outlined";
 type Shape = "rectangle" | "circle";
@@ -31,7 +32,7 @@ function Button({
         styles[shape],
         styles[size],
         SameWidthHeight && styles["same-width-height"],
-        className
+        className,
       )}
       {...otherProps}
     >

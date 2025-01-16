@@ -9,7 +9,7 @@ function Header() {
     <header className={styles.header}>
       <h1>Dream Board</h1>
       <Button SameWidthHeight size="small">
-        <IconParkTwotoneMoon/>
+        <IconParkTwotoneMoon />
       </Button>
     </header>
   );

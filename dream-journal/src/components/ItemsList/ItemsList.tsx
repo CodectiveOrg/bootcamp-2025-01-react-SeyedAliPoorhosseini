@@ -3,7 +3,17 @@ import IconParkTwotoneWrite from "../../icons/IconParkTwotoneWrite";
 
 import styles from "./ItemsList.module.css";
 
-const dreams = ["falling from a height😲", "school exam📝", "asking for help🙋‍♂️","Flying in a dream✈","Seeing an old friend🤝","Drowning in water🌊","Car accident🚗","Arriving late🏃‍♂️","Inability to move👨‍🦯"];
+const dreams = [
+  "falling from a height😲",
+  "school exam📝",
+  "asking for help🙋‍♂️",
+  "Flying in a dream✈",
+  "Seeing an old friend🤝",
+  "Drowning in water🌊",
+  "Car accident🚗",
+  "Arriving late🏃‍♂️",
+  "Inability to move👨‍🦯",
+];
 
 function ItemsList() {
   return (

@@ -8,7 +8,12 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Button className={styles.button} SameWidthHeight shape="circle" size="medium">
+      <Button
+        className={styles.button}
+        SameWidthHeight
+        shape="circle"
+        size="medium"
+      >
         <IconParkTwotoneAdd />
       </Button>
       <dialog>
