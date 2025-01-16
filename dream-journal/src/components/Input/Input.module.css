@@ -17,11 +17,6 @@
   input {
     border: none;
     outline: none;
-
-    color: var(--color-primary);
-    &::placeholder{
-        color: var(--color-primary);
-    }
   }
   svg {
     color: var(--color-primary);

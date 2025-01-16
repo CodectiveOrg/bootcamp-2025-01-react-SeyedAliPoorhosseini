@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <h1>Dream Board</h1>
-      <Button SameWidthHeight>
+      <Button SameWidthHeight size="small">
         <IconParkTwotoneMoon/>
       </Button>
     </header>

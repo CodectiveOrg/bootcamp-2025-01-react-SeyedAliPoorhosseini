@@ -1,7 +1,8 @@
 :root {
-  --color-primary: hsl(173.06, 100%, 23.73%);
-  --color-primary-border: hsl(173.06, 100%, 33.73%);
-  --color-primary-focus: hsl(173.06, 100%, 23.73%, 40%);
+  --color-primary: hsl(198.43,100.00%,75.10%);
+  --color-primary-button: hsl(198.43,100.00%,45.10%);
+  --color-primary-border: hsl(198.43,100.00%,65.10%);
+  --color-primary-focus: hsl(198.43,100.00%,85.10%);
   --color-white: hsl(0, 0%, 100%);
   --color-gray: hsl(0, 0%, 80.4%);
   --color-danger: hsl(0, 100%, 40.2%);
@@ -42,6 +43,6 @@ body {
   margin-inline: auto;
 
   background-image: url(./cloud.jpg);
-  background-size: 100vw 20rem;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
