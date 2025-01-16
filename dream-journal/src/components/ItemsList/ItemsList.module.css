@@ -64,9 +64,9 @@
       }
     }
     &:hover {
-        .actions{
-            opacity: 1;
-        }
+      .actions {
+        opacity: 1;
+      }
     }
   }
 }

@@ -3,8 +3,9 @@
   --color-primary-border: hsl(173.06, 100%, 33.73%);
   --color-primary-focus: hsl(173.06, 100%, 23.73%, 40%);
   --color-white: hsl(0, 0%, 100%);
-  --color-gray:hsl(0, 0%, 80.4%);
-  --color-danger:hsl(0, 100%, 40.2%);
+  --color-gray: hsl(0, 0%, 80.4%);
+  --color-danger: hsl(0, 100%, 40.2%);
+  --color-backdrop: hsl(0, 0%, 15%, 70%);
 }
 *,
 *::before,
