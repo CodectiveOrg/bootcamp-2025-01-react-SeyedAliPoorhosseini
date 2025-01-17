@@ -10,7 +10,7 @@ function Footer() {
     <footer className={styles.footer}>
       <Button
         className={styles.button}
-        SameWidthHeight
+        sameWidthHeight
         shape="circle"
         size="medium"
       >
@@ -31,4 +31,5 @@ function Footer() {
     </footer>
   );
 }
+
 export default Footer;

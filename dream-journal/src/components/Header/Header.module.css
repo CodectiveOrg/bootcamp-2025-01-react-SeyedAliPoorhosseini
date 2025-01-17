@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-between;
   margin-block-start: 2.5rem;
+
   h1 {
     font-size: 1.5rem;
     font-weight: 500;
   }
+
   Button {
     svg {
-      color: #fff;
+      color: var(--color-white);
     }
   }
 }

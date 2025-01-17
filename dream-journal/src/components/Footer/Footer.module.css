@@ -3,10 +3,12 @@
     position: fixed;
     inset-inline-end: max(1rem, ((100vw - 45rem) / 2));
     inset-block-end: 2rem;
+
     svg {
       color: #fff;
     }
   }
+
   dialog {
     width: 25rem;
 
@@ -20,6 +22,7 @@
       background-color: var(--color-backdrop);
       backdrop-filter: blur(2px);
     }
+
     .content {
       .title {
         text-align: center;
@@ -29,8 +32,7 @@
 
         margin-block-end: 1.5rem;
       }
-      input {
-      }
+
       .actions {
         display: flex;
         justify-content: space-between;

@@ -8,10 +8,11 @@ function Header() {
   return (
     <header className={styles.header}>
       <h1>Dream Board</h1>
-      <Button SameWidthHeight size="small">
+      <Button sameWidthHeight size="small">
         <IconParkTwotoneMoon />
       </Button>
     </header>
   );
 }
+
 export default Header;

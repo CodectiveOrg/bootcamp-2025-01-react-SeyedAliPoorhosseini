@@ -4,15 +4,16 @@ import styles from "./Input.module.css";
 
 type Props = {
   placeholder?: string;
-  SuffixIcon?: ReactNode;
+  suffixIcon?: ReactNode;
 };
 
-function Input({ placeholder, SuffixIcon }: Props) {
+function Input({ placeholder, suffixIcon }: Props) {
   return (
     <div className={styles["search-box"]}>
       <input type="text" placeholder={placeholder} />
-      {SuffixIcon}
+      {suffixIcon}
     </div>
   );
 }
+
 export default Input;

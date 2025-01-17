@@ -1,11 +1,11 @@
 :root {
-  --color-primary: hsl(198.43, 100%, 75.1%);
-  --color-primary-button: hsl(198.43, 100%, 45.1%);
-  --color-primary-border: hsl(198.43, 100%, 65.1%);
-  --color-primary-focus: hsl(198.43, 100%, 85.1%);
+  --color-primary: hsl(190, 100%, 75%);
+  --color-primary-button: hsl(195, 100%, 45%);
+  --color-primary-border: hsl(195, 100%, 65%);
+  --color-primary-focus: hsl(195, 100%, 85%);
   --color-white: hsl(0, 0%, 100%);
-  --color-gray: hsl(0, 0%, 80.4%);
-  --color-danger: hsl(0, 100%, 40.2%);
+  --color-gray: hsl(0, 0%, 80%);
+  --color-danger: hsl(0, 100%, 40%);
   --color-backdrop: hsl(0, 0%, 15%, 70%);
 }
 *,

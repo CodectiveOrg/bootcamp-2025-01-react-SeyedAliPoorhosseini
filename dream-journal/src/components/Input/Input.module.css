@@ -18,9 +18,11 @@
     border: none;
     outline: none;
   }
+
   svg {
     color: var(--color-primary);
   }
+
   &:focus-within {
     outline: 3px solid var(--color-primary-focus);
   }

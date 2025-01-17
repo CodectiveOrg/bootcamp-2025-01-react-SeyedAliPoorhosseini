@@ -13,4 +13,5 @@ function ItemTypeFilter() {
     </select>
   );
 }
+
 export default ItemTypeFilter;

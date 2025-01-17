@@ -12,7 +12,7 @@ type Props = ComponentProps<"button"> & {
   variant?: Variant;
   shape?: Shape;
   size?: Size;
-  SameWidthHeight?: false;
+  sameWidthHeight?: false;
 };
 
 function Button({
@@ -21,7 +21,7 @@ function Button({
   variant = "solid",
   shape = "rectangle",
   size = "medium",
-  SameWidthHeight = "false",
+  sameWidthHeight = "false",
   ...otherProps
 }: Props) {
   return (
@@ -31,7 +31,7 @@ function Button({
         styles[variant],
         styles[shape],
         styles[size],
-        SameWidthHeight && styles["same-width-height"],
+        sameWidthHeight && styles["same-width-height"],
         className,
       )}
       {...otherProps}
