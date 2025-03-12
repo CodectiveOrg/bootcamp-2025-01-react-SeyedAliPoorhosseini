@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -13,12 +13,20 @@ function App() {
   const [dreams, setDreams] = useState<Dream[]>(() => {
     const item = localStorage.getItem("dreams");
 
-    if (!item) {
+    if (item === null) {
       return [];
     }
 
     return JSON.parse(item);
   });
+
+  const applyHandler = (newDream: Dream): void => {
+    setDreams((old) => [...old, newDream]);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("dreams", JSON.stringify(dreams));
+  }, [dreams]);
 
   return (
     <div className="app">
@@ -27,7 +35,7 @@ function App() {
         <Toolbar />
         <ItemsList dreams={dreams} />
       </main>
-      <Footer />
+      <Footer onApply={applyHandler} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { DialogHTMLAttributes, useRef } from "react";
+import { useRef } from "react";
 
 import IconParkTwotoneAdd from "../../icons/IconParkTwotoneAdd";
 
@@ -6,14 +6,40 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 
 import styles from "./Footer.module.css";
+import { Dream } from "../../types/dream";
 
-function Footer() {
+type Props = {
+  onApply: (dream: Dream) => void;
+};
+
+function Footer({ onApply }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const openButtonClickHandler = () => {
     dialogRef.current?.showModal();
   };
+
   const closeButtonClickHandler = () => {
+    dialogRef.current?.close();
+  };
+
+  const applyButtonClickHandler = () => {
+    const title = inputRef.current?.value;
+
+    if (!title) {
+      return;
+    }
+
+    const dream: Dream = {
+      id: "",
+      title,
+      content: "",
+      date: new Date(),
+      vibe: "good",
+    };
+
+    onApply(dream);
     dialogRef.current?.close();
   };
 
@@ -31,7 +57,7 @@ function Footer() {
       <dialog ref={dialogRef}>
         <div className={styles.content}>
           <div className={styles.title}>New Dream</div>
-          <Input placeholder="input your new dream..."></Input>
+          <Input ref={inputRef} placeholder="input your new dream..."></Input>
           <div className={styles.actions}>
             <Button
               size="small"
@@ -40,7 +66,9 @@ function Footer() {
             >
               Cancel
             </Button>
-            <Button size="small">Apply</Button>
+            <Button size="small" onClick={applyButtonClickHandler}>
+              Apply
+            </Button>
           </div>
         </div>
       </dialog>
