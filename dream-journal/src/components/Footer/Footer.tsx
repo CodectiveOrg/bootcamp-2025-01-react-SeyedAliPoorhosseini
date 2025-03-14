@@ -7,6 +7,7 @@ import Input from "../Input/Input";
 
 import styles from "./Footer.module.css";
 import { Dream } from "../../types/dream";
+import DateInput from "../DateInput/DateInput";
 
 type Props = {
   onApply: (dream: Dream) => void;
@@ -15,6 +16,7 @@ type Props = {
 function Footer({ onApply }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dateRef = useRef<HTMLInputElement>(null);
 
   const openButtonClickHandler = () => {
     dialogRef.current?.showModal();
@@ -26,16 +28,20 @@ function Footer({ onApply }: Props) {
 
   const applyButtonClickHandler = () => {
     const title = inputRef.current?.value;
+    const date = dateRef.current?.value;
 
     if (!title) {
       return;
     }
+    if (!date) {
+      return;
+    }
 
     const dream: Dream = {
-      id: "",
+      id: crypto.randomUUID(),
       title,
       content: "",
-      date: new Date(),
+      date: new Date(date),
       vibe: "good",
     };
 
@@ -58,6 +64,7 @@ function Footer({ onApply }: Props) {
         <div className={styles.content}>
           <div className={styles.title}>New Dream</div>
           <Input ref={inputRef} placeholder="input your new dream..."></Input>
+          <DateInput ref={dateRef}></DateInput>
           <div className={styles.actions}>
             <Button
               size="small"

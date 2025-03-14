@@ -3,7 +3,7 @@ import IconParkTwotoneWrite from "../../icons/IconParkTwotoneWrite";
 
 import { Dream } from "../../types/dream";
 
-import styles from "./ItemsList.module.css";
+import styles from "./DreamsList.module.css";
 
 // const dreams = [
 //   "falling from a height😲",
@@ -21,15 +21,13 @@ type Props = {
   dreams: Dream[];
 };
 
-function ItemsList({dreams}:Props) {
+function DreamsList({ dreams }: Props) {
   return (
-    <ul className={styles.items}>
+    <ul className={styles["dreams-list"]}>
       {dreams.map((dream) => (
         <li key={dream.id}>
-          <label>
-            <input type="checkbox" />
-            <p>{dream.title}</p>
-          </label>
+          <p className={styles.date}>{dream.date.toLocaleDateString()}</p>
+          <p className={styles.title}>{dream.title}</p>
           <div className={styles.actions}>
             <button className={styles.edit}>
               <IconParkTwotoneWrite />
@@ -44,4 +42,4 @@ function ItemsList({dreams}:Props) {
   );
 }
 
-export default ItemsList;
+export default DreamsList;

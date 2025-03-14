@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import ItemsList from "./components/ItemsList/ItemsList";
+import DreamsList from "./components/DreamsList/DreamsList";
 import Toolbar from "./components/Toolbar/Toolbar";
 
 import "./App.module.css";
@@ -17,7 +17,8 @@ function App() {
       return [];
     }
 
-    return JSON.parse(item);
+    const dreams: Dream[] = JSON.parse(item);
+    return dreams.map((dream) => ({ ...dream, date: new Date(dream.date) }));
   });
 
   const applyHandler = (newDream: Dream): void => {
@@ -33,7 +34,7 @@ function App() {
       <Header />
       <main>
         <Toolbar />
-        <ItemsList dreams={dreams} />
+        <DreamsList dreams={dreams} />
       </main>
       <Footer onApply={applyHandler} />
     </div>
