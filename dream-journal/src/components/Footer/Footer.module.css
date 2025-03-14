@@ -24,6 +24,9 @@
     }
 
     .content {
+      display: grid;
+      row-gap: .4rem;
+
       .title {
         text-align: center;
 

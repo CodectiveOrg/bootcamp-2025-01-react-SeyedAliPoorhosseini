@@ -8,6 +8,7 @@ import Input from "../Input/Input";
 import styles from "./Footer.module.css";
 import { Dream } from "../../types/dream";
 import DateInput from "../DateInput/DateInput";
+import TextArea from "../TextArea/TextArea";
 
 type Props = {
   onApply: (dream: Dream) => void;
@@ -65,6 +66,7 @@ function Footer({ onApply }: Props) {
           <div className={styles.title}>New Dream</div>
           <Input ref={inputRef} placeholder="input your new dream..."></Input>
           <DateInput ref={dateRef}></DateInput>
+          <TextArea placeholder="input your desc dream..."></TextArea>
           <div className={styles.actions}>
             <Button
               size="small"

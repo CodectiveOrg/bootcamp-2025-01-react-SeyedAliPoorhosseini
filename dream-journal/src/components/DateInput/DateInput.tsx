@@ -1,16 +1,13 @@
-import { forwardRef, ReactNode } from "react";
+import { ForwardedRef, forwardRef, ReactNode } from "react";
 
 import styles from "./DateInput.module.css";
 
-const DateInput = forwardRef<HTMLInputElement>(function(
-  _ ,
-  ref
-): ReactNode {
+function DateInput(_,ref:ForwardedRef<HTMLInputElement>): ReactNode {
   return (
     <div className={styles["date-input"]}>
       <input ref={ref} type="date" />
     </div>
   );
-});
+};
 
-export default DateInput;
+export default forwardRef(DateInput);

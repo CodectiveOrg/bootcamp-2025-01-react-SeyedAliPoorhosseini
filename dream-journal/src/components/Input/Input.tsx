@@ -1,4 +1,4 @@
-import { ReactNode, forwardRef } from "react";
+import { ForwardedRef, ReactNode, forwardRef } from "react";
 
 import styles from "./Input.module.css";
 
@@ -7,9 +7,9 @@ type Props = {
   suffixIcon?: ReactNode;
 };
 
-const Input = forwardRef<HTMLInputElement, Props>(function (
-  { placeholder, suffixIcon },
-  ref
+function Input(
+  { placeholder, suffixIcon }: Props,
+  ref: ForwardedRef<HTMLInputElement>
 ) {
   return (
     <div className={styles["date-input"]}>
@@ -17,6 +17,6 @@ const Input = forwardRef<HTMLInputElement, Props>(function (
       {suffixIcon}
     </div>
   );
-});
+}
 
-export default Input;
+export default forwardRef(Input);

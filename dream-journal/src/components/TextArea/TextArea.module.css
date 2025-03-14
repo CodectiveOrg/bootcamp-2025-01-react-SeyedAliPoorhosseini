@@ -1,3 +1,26 @@
 .text-area{
-    
+    display: flex;
+
+    overflow: hidden;
+
+    padding: .5rem;
+
+    border: 1px solid var(--color-primary);
+    border-radius: .5rem;
+
+    textarea{
+        flex: 1;
+
+        border: none;
+
+        min-block-size: 2rem;
+        max-block-size: 7rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+    &:focus-within{
+        border: 2px solid var(--color-primary-focus);
+    }
 }
