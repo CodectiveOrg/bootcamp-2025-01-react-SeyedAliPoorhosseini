@@ -33,14 +33,13 @@
         font-size: 2rem;
         font-weight: 500;
 
-        margin-block-end: 1.5rem;
       }
 
       .actions {
         display: flex;
         justify-content: space-between;
 
-        margin-block-start: 8rem;
+        margin-block-start: 2rem;
       }
     }
   }

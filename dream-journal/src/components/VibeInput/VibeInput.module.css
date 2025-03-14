@@ -1,0 +1,18 @@
+.vibe-input {
+  display: flex;
+
+  border: 2px solid var(--color-primary);
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+
+  padding: 0.25rem;
+
+  select {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+  }
+}
