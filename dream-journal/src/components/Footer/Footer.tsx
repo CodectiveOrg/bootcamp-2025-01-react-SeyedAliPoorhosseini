@@ -28,7 +28,9 @@ function Footer({ onApply }: Props): ReactNode {
   };
 
   const formSubmitHandler = (e: FormEvent<HTMLFormElement>): void => {
+    console.log(e.currentTarget)
     const formData = new FormData(e.currentTarget);
+
     const title = formData.get("title");
     const date = formData.get("date");
     const desc = formData.get("desc");
@@ -55,8 +57,6 @@ function Footer({ onApply }: Props): ReactNode {
       date: new Date(date as string),
       vibe: vibe as Vibe,
     };
-
-    console.log(title, desc, vibe);
 
     onApply(dream);
 
@@ -92,7 +92,7 @@ function Footer({ onApply }: Props): ReactNode {
             >
               Cancel
             </Button>
-            <Button size="small">Apply</Button>
+            <Button size="small" type="submit">Apply</Button>
           </div>
         </form>
       </dialog>

@@ -1,10 +1,12 @@
-import { ForwardedRef, forwardRef, ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 import styles from "./VibeInput.module.css";
 
-function VibeInput(_, ref: ForwardedRef<HTMLSelectElement>): ReactNode {
+type Props = ComponentProps<"select"> & {};
+
+function VibeInput({ ...otherProps }: Props): ReactNode {
   return (
     <div className={styles["vibe-input"]}>
-      <select ref={ref}>
+      <select {...otherProps}>
         <option value="good">good dream</option>
         <option value="bad">bad dream</option>
       </select>
@@ -12,4 +14,4 @@ function VibeInput(_, ref: ForwardedRef<HTMLSelectElement>): ReactNode {
   );
 }
 
-export default forwardRef(VibeInput);
+export default VibeInput;

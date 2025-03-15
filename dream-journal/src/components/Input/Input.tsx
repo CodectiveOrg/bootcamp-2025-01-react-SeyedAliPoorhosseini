@@ -1,22 +1,19 @@
-import { ForwardedRef, ReactNode, forwardRef } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 import styles from "./Input.module.css";
 
-type Props = {
+type Props = ComponentProps<"input"> & {
   placeholder?: string;
   suffixIcon?: ReactNode;
 };
 
-function Input(
-  { placeholder, suffixIcon }: Props,
-  ref: ForwardedRef<HTMLInputElement>
-): ReactNode {
+function Input({ placeholder, suffixIcon, ...otherProps }: Props): ReactNode {
   return (
     <div className={styles["date-input"]}>
-      <input ref={ref} type="text" placeholder={placeholder} />
+      <input type="text" placeholder={placeholder} {...otherProps} />
       {suffixIcon}
     </div>
   );
 }
 
-export default forwardRef(Input);
+export default Input;

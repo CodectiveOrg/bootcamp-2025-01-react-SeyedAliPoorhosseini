@@ -1,13 +1,15 @@
-import { ForwardedRef, forwardRef, ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 import styles from "./DateInput.module.css";
 
-function DateInput(_, ref: ForwardedRef<HTMLInputElement>): ReactNode {
+type Props = ComponentProps<"input"> & {};
+
+function DateInput({ ...otherProps }: Props): ReactNode {
   return (
     <div className={styles["date-input"]}>
-      <input ref={ref} type="date" />
+      <input type="date" {...otherProps} />
     </div>
   );
 }
 
-export default forwardRef(DateInput);
+export default DateInput;

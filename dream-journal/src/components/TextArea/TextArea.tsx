@@ -1,20 +1,17 @@
-import { ForwardedRef, forwardRef, ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 import styles from "./TextArea.module.css";
 
-type Props = {
+type Props = ComponentProps<"textarea"> & {
   placeholder?: string;
 };
 
-function TextArea(
-  { placeholder }: Props,
-  ref: ForwardedRef<HTMLTextAreaElement>
-): ReactNode {
+function TextArea({ placeholder, ...otherProps }: Props): ReactNode {
   return (
     <div className={styles["text-area"]}>
-      <textarea ref={ref} placeholder={placeholder} rows={3} />
+      <textarea placeholder={placeholder} rows={3} {...otherProps} />
     </div>
   );
 }
 
-export default forwardRef(TextArea);
+export default TextArea;
