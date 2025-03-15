@@ -3,8 +3,9 @@ import Button from "../Button/Button";
 import IconParkTwotoneMoon from "../../icons/IconParkTwotoneMoon";
 
 import styles from "./Header.module.css";
+import { ReactNode } from "react";
 
-function Header() {
+function Header(): ReactNode {
   return (
     <header className={styles.header}>
       <h1>Dream Board</h1>

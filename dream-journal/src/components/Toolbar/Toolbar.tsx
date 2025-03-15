@@ -4,8 +4,9 @@ import Input from "../Input/Input";
 import IconParkTwotoneSearch from "../../icons/IconParkTwotoneSearch";
 
 import styles from "./Toolbar.module.css";
+import { ReactNode } from "react";
 
-function Toolbar() {
+function Toolbar(): ReactNode {
   return (
     <div className={styles.toolbar}>
       <Input

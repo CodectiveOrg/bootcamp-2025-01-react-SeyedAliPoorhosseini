@@ -1,4 +1,4 @@
-import { ComponentProps } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 import clsx from "clsx";
 
@@ -23,7 +23,7 @@ function Button({
   size = "medium",
   sameWidthHeight = "false",
   ...otherProps
-}: Props) {
+}: Props): ReactNode {
   return (
     <button
       className={clsx(
@@ -32,7 +32,7 @@ function Button({
         styles[shape],
         styles[size],
         sameWidthHeight && styles["same-width-height"],
-        className,
+        className
       )}
       {...otherProps}
     >

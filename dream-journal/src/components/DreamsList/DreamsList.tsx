@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import IconParkTwotoneDelete from "../../icons/IconParkTwotoneDelete";
 import IconParkTwotoneWrite from "../../icons/IconParkTwotoneWrite";
 
@@ -21,7 +22,7 @@ type Props = {
   dreams: Dream[];
 };
 
-function DreamsList({ dreams }: Props) {
+function DreamsList({ dreams }: Props): ReactNode {
   return (
     <ul className={styles["dreams-list"]}>
       {dreams.map((dream) => (

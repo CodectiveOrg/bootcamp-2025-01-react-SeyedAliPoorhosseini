@@ -1,4 +1,6 @@
-function ItemTypeFilter() {
+import { ReactNode } from "react";
+
+function ItemTypeFilter(): ReactNode {
   return (
     <select>
       <option value="" key="">

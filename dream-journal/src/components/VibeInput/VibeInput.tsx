@@ -1,5 +1,5 @@
 import { ForwardedRef, forwardRef, ReactNode } from "react";
-import styles from './VibeInput.module.css';
+import styles from "./VibeInput.module.css";
 
 function VibeInput(_, ref: ForwardedRef<HTMLSelectElement>): ReactNode {
   return (

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, FormEvent, ReactNode } from "react";
 
 import IconParkTwotoneAdd from "../../icons/IconParkTwotoneAdd";
 
@@ -10,15 +10,14 @@ import { Dream } from "../../types/dream";
 import DateInput from "../DateInput/DateInput";
 import TextArea from "../TextArea/TextArea";
 import VibeInput from "../VibeInput/VibeInput";
+import { Vibe } from "../../types/vibe";
 
 type Props = {
   onApply: (dream: Dream) => void;
 };
 
-function Footer({ onApply }: Props) {
+function Footer({ onApply }: Props): ReactNode {
   const dialogRef = useRef<HTMLDialogElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const dateRef = useRef<HTMLInputElement>(null);
 
   const openButtonClickHandler = () => {
     dialogRef.current?.showModal();
@@ -28,26 +27,39 @@ function Footer({ onApply }: Props) {
     dialogRef.current?.close();
   };
 
-  const applyButtonClickHandler = () => {
-    const title = inputRef.current?.value;
-    const date = dateRef.current?.value;
+  const formSubmitHandler = (e: FormEvent<HTMLFormElement>): void => {
+    const formData = new FormData(e.currentTarget);
+    const title = formData.get("title");
+    const date = formData.get("date");
+    const desc = formData.get("desc");
+    const vibe = formData.get("vibe");
 
+    e.preventDefault();
     if (!title) {
       return;
     }
     if (!date) {
       return;
     }
+    if (!desc) {
+      return;
+    }
+    if (!vibe) {
+      return;
+    }
 
     const dream: Dream = {
       id: crypto.randomUUID(),
-      title,
-      content: "",
-      date: new Date(date),
-      vibe: "good",
+      title: title as string,
+      content: desc as string,
+      date: new Date(date as string),
+      vibe: vibe as Vibe,
     };
 
+    console.log(title, desc, vibe);
+
     onApply(dream);
+
     dialogRef.current?.close();
   };
 
@@ -63,12 +75,15 @@ function Footer({ onApply }: Props) {
         <IconParkTwotoneAdd />
       </Button>
       <dialog ref={dialogRef}>
-        <div className={styles.content}>
+        <form className={styles.content} onSubmit={formSubmitHandler}>
           <div className={styles.title}>New Dream</div>
-          <Input ref={inputRef} placeholder="input your new dream..."></Input>
-          <DateInput ref={dateRef}></DateInput>
-          <TextArea placeholder="input your desc dream..."></TextArea>
-          <VibeInput></VibeInput>
+          <Input name="title" placeholder="input your new dream..."></Input>
+          <DateInput name="date"></DateInput>
+          <TextArea
+            name="desc"
+            placeholder="input your desc dream..."
+          ></TextArea>
+          <VibeInput name="vibe"></VibeInput>
           <div className={styles.actions}>
             <Button
               size="small"
@@ -77,11 +92,9 @@ function Footer({ onApply }: Props) {
             >
               Cancel
             </Button>
-            <Button size="small" onClick={applyButtonClickHandler}>
-              Apply
-            </Button>
+            <Button size="small">Apply</Button>
           </div>
-        </div>
+        </form>
       </dialog>
     </footer>
   );

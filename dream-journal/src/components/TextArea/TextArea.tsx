@@ -12,7 +12,7 @@ function TextArea(
 ): ReactNode {
   return (
     <div className={styles["text-area"]}>
-      <textarea ref={ref} placeholder={placeholder} rows={3}/>
+      <textarea ref={ref} placeholder={placeholder} rows={3} />
     </div>
   );
 }

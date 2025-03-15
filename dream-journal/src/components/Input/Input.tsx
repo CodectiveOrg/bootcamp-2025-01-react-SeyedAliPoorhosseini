@@ -10,7 +10,7 @@ type Props = {
 function Input(
   { placeholder, suffixIcon }: Props,
   ref: ForwardedRef<HTMLInputElement>
-) {
+): ReactNode {
   return (
     <div className={styles["date-input"]}>
       <input ref={ref} type="text" placeholder={placeholder} />
